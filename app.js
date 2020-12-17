@@ -8,7 +8,8 @@ const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const authRoute = require('./routes/auth.route');
-const suggestionRoute = require('./routes/suggestion.route')
+const suggestionRoute = require('./routes/suggestion.route');
+const documentationRoute = require('./routes/documentation.route');
 
 const corsOptions = {
     origin: "http://localhost:3000",
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use(cors(corsOptions));
 
 //routes
+app.use('/', documentationRoute);
 app.use('/api', authRoute);
 app.use('/api', suggestionRoute);
 

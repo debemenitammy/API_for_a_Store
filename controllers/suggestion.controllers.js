@@ -27,7 +27,7 @@ exports.suggestItem = async(req, res) => {
 exports.getSuggestions = async(req, res) => {
     try {
         const category = req.params.category;
-        const allItems = (category) ? await Product.find({ item_category: category }) : await Item.find();
+        const allItems = (category) ? await Product.find({ item_category: category }) : await Product.find();
         if(allItems) {
             res.status(200).json(allItems);
         } else {
