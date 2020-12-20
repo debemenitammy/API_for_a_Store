@@ -12,7 +12,7 @@ const suggestionRoute = require('./routes/suggestion.route');
 const documentationRoute = require('./routes/documentation.route');
 
 const corsOptions = {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:${port}",
     optionsSuccessStatus: 200
 }
 
