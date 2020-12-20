@@ -11,6 +11,7 @@ const authRoute = require('./routes/auth.route');
 const suggestionRoute = require('./routes/suggestion.route');
 const documentationRoute = require('./routes/documentation.route');
 
+const port = process.env.PORT || 3000;
 const corsOptions = {
     origin: "http://localhost:${port}",
     optionsSuccessStatus: 200
@@ -40,5 +41,4 @@ try {
 }
 
 
-const port = process.env.PORT || 3000;
 app.listen(port, (() => console.log(`server started on port ${port}`)));
