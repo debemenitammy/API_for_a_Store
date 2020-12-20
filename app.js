@@ -13,7 +13,7 @@ const documentationRoute = require('./routes/documentation.route');
 
 const port = process.env.PORT || 3000;
 const corsOptions = {
-    origin: "http://localhost:${port}",
+    "origin": "*",
     optionsSuccessStatus: 200
 }
 
