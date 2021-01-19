@@ -10,4 +10,4 @@ router.get('/suggested', verify_middleware.verifyToken, controller.getSuggestion
 router.get('/suggested/:category', verify_middleware.verifyToken, controller.getSuggestions);
 
 
-module.exports = router;
+module.exports = router;                                                                                                                                                                    

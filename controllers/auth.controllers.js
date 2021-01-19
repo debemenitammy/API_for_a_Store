@@ -20,7 +20,7 @@ exports.signup = async(req, res) => {
                         fullname,
                         email,
                         mobile_number,
-                        address,
+                        address, 
                         gender,
                         password: hashedPassword
                     });
